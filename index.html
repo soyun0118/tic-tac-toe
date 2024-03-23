@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/overlays.css">
   <link rel="stylesheet" href="styles/configuration.css">
+  <link rel="stylesheet" href="styles/game.css">
 </head>
 <body>
   <div id="backdrop"></div>
@@ -37,7 +38,7 @@
           <article>
             <h2>Player 1</h2>
             <h3>Player name</h3>
-            <div>X</div>
+            <div class="player-symbol">X</div>
             <button class="btn">Edit Name</button>
           </article>
         </li>
@@ -45,19 +46,20 @@
           <article>
             <h2>Player 2</h2>
             <h3>Player name</h3>
-            <div>O</div>
+            <div class="player-symbol">O</div>
             <button class="btn">Edit Name</button>
           </article>
         </li>
       </ol>
-      <button class="btn">Start New Game</button>
+      <button class="btn btn-start">Start New Game</button>
     </section>
     <section id="active-game">
-      <article>
+      <article id="game-over">
         <h3>You won, <span>Player Name</span>!</h3>
+        <p>Click "Start New Game" above, to start a new game!</p>
       </article>
       <p>It's your turn : <span id="active-player">Player Name</span>!</p>
-      <ol>
+      <ol id="game-board">
         <li></li>
         <li></li>
         <li></li>

@@ -1,0 +1,30 @@
+#config-overlay {
+  text-align: center;
+}
+
+#config-overlay h2 {
+  margin: 1rem 0;
+}
+
+.form-control {
+  margin: 1rem 0;
+}
+
+.form-control label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-control input {
+  font: inherit;
+  border: 1px solid rgb(204, 225, 202);
+  width: 50%;
+  padding: 0.3rem;
+}
+
+@media (min-width: 48rem) {
+  .form-control input {
+    width: 30%;
+  }
+}

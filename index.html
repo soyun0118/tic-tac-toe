@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" 
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="main-header">
+    <a>Free Classic Games</a>
+    <h1>Play Tic, Tac, Toe</h1>
+  </header>
+  <main>
+    <aside class="modal">
+      <h2>Choose your name</h2>
+      <form>
+        <div>
+          <label for="playername">Player Name</label>
+          <input type="text" name="playername" id="playername">
+        </div>
+        <div>
+          <button type="button" class="btn btn-alt">Cancel</button>
+          <button type="submit" class="btn">Confirm</button>
+        </div>
+      </form>
+    </aside>
+    <section id="config-game">
+      <ol>
+        <li id="player-one">
+          <article>
+            <h2>Player 1</h2>
+            <h3>Player name</h3>
+            <div>X</div>
+            <button class="btn">Edit Name</button>
+          </article>
+        </li>
+        <li id="player-two">
+          <article>
+            <h2>Player 2</h2>
+            <h3>Player name</h3>
+            <div>O</div>
+            <button class="btn">Edit Name</button>
+          </article>
+        </li>
+      </ol>
+      <button class="btn">Start New Game</button>
+    </section>
+    <section id="active-game">
+      <article>
+        <h3>You won, <span>Player Name</span>!</h3>
+      </article>
+      <p>It's your turn : <span id="active-player">Player Name</span>!</p>
+      <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+
+        <li></li>
+        <li></li>
+        <li></li>
+
+        <li></li>
+        <li></li>
+        <li></li>
+      </ol>
+    </section>
+  </main>
+  <footer></footer>
+</body>
+</html>

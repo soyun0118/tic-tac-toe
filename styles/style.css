@@ -8,7 +8,7 @@ body {
 
 #main-header {
   color: rgb(255, 255, 255);
-  padding: 2rem 5%;
+  padding: 2rem 5% 0.5rem;
   text-align: center;
 }
 
@@ -24,6 +24,7 @@ body {
 }
 
 .btn-alt {
+  margin: 1rem;
   background-color: transparent;
   border-color: transparent;
   color: rgb(255, 255, 255);

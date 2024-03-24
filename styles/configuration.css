@@ -14,6 +14,7 @@
   display: block;
   margin-bottom: 0.5rem;
   font-weight: bold;
+  transition: 1s;
 }
 
 .form-control input {
@@ -22,6 +23,11 @@
   width: 50%;
   max-width: 15rem;
   padding: 0.3rem;
+}
+
+.error label,
+.error input {
+  color: rgb(216, 78, 53);
 }
 
 #config-game {

@@ -11,6 +11,9 @@
   <link rel="stylesheet" href="styles/overlays.css">
   <link rel="stylesheet" href="styles/configuration.css">
   <link rel="stylesheet" href="styles/game.css">
+  <script src="scripts/config.js" defer></script>
+  <script src="scripts/game.js" defer></script>
+  <script src="scripts/app.js" defer></script>
 </head>
 <body>
   <div id="backdrop"></div>
@@ -24,11 +27,12 @@
       <form>
         <div class="form-control">
           <label for="playername">Player Name</label>
-          <input type="text" name="playername" id="playername">
+          <input type="text" name="playername" id="playername" required>
         </div>
+        <p id="config-error"></p>
         <div>
-          <button type="button" class="btn btn-alt">Cancel</button>
-          <button type="submit" class="btn">Confirm</button>
+          <button type="reset" class="btn btn-alt" id="cancel">Cancel</button>
+          <button type="submit" class="btn" id="confirm">Confirm</button>
         </div>
       </form>
     </aside>
@@ -39,7 +43,7 @@
             <h2>Player 1</h2>
             <h3>Player name</h3>
             <div class="player-symbol">X</div>
-            <button class="btn">Edit Name</button>
+            <button class="btn" id="edit-name-1">Edit Name</button>
           </article>
         </li>
         <li id="player-two">
@@ -47,7 +51,7 @@
             <h2>Player 2</h2>
             <h3>Player name</h3>
             <div class="player-symbol">O</div>
-            <button class="btn">Edit Name</button>
+            <button class="btn" id="edit-name-2">Edit Name</button>
           </article>
         </li>
       </ol>

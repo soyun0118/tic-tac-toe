@@ -1,3 +1,16 @@
+let editPlayer = 0;
+
+const players = [
+  {
+    name: '',
+    Symbol: 'X'
+  },
+  {
+    name: '',
+    Symbol: 'O'
+  },
+];
+
 const configOverlay = document.getElementById('config-overlay');
 const backdropElement = document.getElementById('backdrop');
 const formElement = document.querySelector('form');

@@ -1,4 +1,5 @@
-function openConfig() {
+function openConfig(event) {
+  editPlayer = +event.target.dataset.player;
   configOverlay.style.display = 'block';
   backdropElement.style.display = 'block';
 }
@@ -8,6 +9,8 @@ function closeConfig() {
   backdropElement.style.display = 'none';
   formElement.firstElementChild.classList.remove('error');
   errorOutput.textContent = '';
+  /* formElement.firstElementChild.lastElementChild.value = ''; */
+  document.getElementById('playername').value = '';
 }
 
 // 입력한 이름을 서버로 보내는 대신 JS에서 처리하기
@@ -21,4 +24,11 @@ function saveNameConfig(event) {
     errorOutput.textContent = 'Please enter your name!';
     return;
   }
+  
+  const updatedPlayerData = document.getElementById('player-data-' + editPlayer);
+  updatedPlayerData.children[1].textContent = enteredName;
+
+  players[editPlayer -1].name = enteredName;
+
+  closeConfig();
 }

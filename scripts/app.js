@@ -1,5 +1,12 @@
+const gameData = [
+  [0, 0, 0],
+  [0, 0, 0],
+  [0, 0, 0],
+];
+
 let editPlayer = 0;
 let activePlayer = 0;
+let currentRound = 1;
 
 const players = [
   {
@@ -18,6 +25,7 @@ const formElement = document.querySelector('form');
 const errorOutput = document.getElementById('config-error');
 const gameArea = document.getElementById('active-game');
 const activePlayerName = document.getElementById('active-player-name');
+const gameOver = document.getElementById('game-over');
 
 const editName1Btn = document.getElementById('edit-name-1');
 const editName2Btn = document.getElementById('edit-name-2');

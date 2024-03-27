@@ -1,6 +1,7 @@
 function resetGameStatus() {
   activePlayer = 0;
   currentRound = 1;
+  gameIsOver = false;
   gameOver.firstElementChild.innerHTML = 
     'You won, <span id="winner-name">Player Name</span>!';
   gameOver.style.display = 'none';
@@ -39,6 +40,11 @@ function switchPlayer() {
 }
 
 function selectField(event) {
+  // 리스트 요소를 누른 것이 아니라면 아무것도 하지 않음
+  if(event.target.tagName !== 'LI' || gameIsOver) {
+    return;
+  }
+
   const selectedField = event.target;
   const selectedCol = selectedField.dataset.col - 1;
   const selectedRow = selectedField.dataset.row - 1;
@@ -77,10 +83,10 @@ function checkGameOver() {
   for (let i = 0; i < 3; i++) {
     if (
       gameData[0][i] > 0 && 
-      gameData[0][i] === gameData[1][i] && 
+      gameData[0][i] === gameData[1][i] &&
       gameData[0][i] === gameData[2][i]
     ) {
-        return gameData[0][0];  //이긴 사람의 id
+        return gameData[0][i];  //이긴 사람의 id
     }
   }
   // 대각선(왼쪽)
@@ -108,6 +114,7 @@ function checkGameOver() {
 }
 
 function endGame(winnerId) {
+  gameIsOver = true;
   gameOver.style.display = 'block';
 
   if (winnerId > 0) {

@@ -7,6 +7,7 @@ const gameData = [
 let editPlayer = 0;
 let activePlayer = 0;
 let currentRound = 1;
+let gameIsOver = false;
 
 const players = [
   {

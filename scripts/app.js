@@ -33,7 +33,6 @@ const cancelConfigBtn = document.getElementById('cancel');
 const startBtn = document.getElementById('start');
 const gameField = document.querySelectorAll('#game-board li');
 
-
 editName1Btn.addEventListener('click', openConfig);
 editName2Btn.addEventListener('click', openConfig);
 
